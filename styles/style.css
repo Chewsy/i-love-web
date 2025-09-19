@@ -85,8 +85,16 @@ padding-top: 5px;
   text-align: center;
 }
 
+.tab p{
+  color: #9c9c9c;
+}
+
 /* ! vind beter alternatief voor padding-top */
 .tab p{
   margin: auto;
   padding-top: 7px;
+}
+
+.code-lines{
+    color: #707680;
 }
