@@ -1,100 +1,132 @@
+html,
 body {
-  background-color: #181818;
-  min-height: 100vh;
-  min-width: 100vh;
+  height: 100%;
   margin: 0;
-  font:
-  1rem "Fira Sans",
-  sans-serif;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  min-width: 100vh;
-  border-bottom: 1px solid #2b2b2b;
+  background-image: url("https://64.media.tumblr.com/a3bb214f4ab01b1e8d18458591592484/tumblr_p5n752fxZd1x5p4g9o1_640.gif");
+  background-size: cover;
+  font-family: "Texturina", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
 }
 
 main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px 1fr 1fr 100px;
+  grid-template-areas:
+    "account_container account_container rewards_container rewards_container rewards_container rewards_container"
+    "taken_container timer_container timer_container timer_container timer_container sheet_container"
+    "taken_container timer_container timer_container timer_container timer_container sheet_container"
+    "navbar_container navbar_container navbar_container navbar_container navbar_container navbar_container";
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+}
+
+.account_container {
+  grid-area: account_container;
+    justify-content: space-between;
+}
+
+.account_container form {
   display: flex;
-  flex-direction: row;
-}
-
-aside {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  color: #ffff;
-  width: 150px;
-  min-height: 100vh;
-  border-right: 1px solid #2b2b2b;
-}
-
-aside ul {
   width: 100%;
-  padding: 0;
+  justify-content: space-around;
 }
 
-aside li {
-  width: 100%;
-  text-align: center;
-  padding: 5px 0px 5px 0px;
-  color: #ffff;
-}
-
-a:link{
+button {
+  background-color: #592e00;
+  border-radius: 10px;
+  border: 1px solid #592e00;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 10px 20px;
+  white-space: nowrap;
   text-decoration: none;
-}
-aside li:hover {
-  background-color: #2b2d2e;
-}
-
-.isactive{
-  background-color: #37373d;
+  text-shadow: 0px 1px 0px #592e00;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  background-color: #1f1f1f;
+
+
+.rewards_container {
+  grid-area: rewards_container;
+}
+
+.taken_container {
+  grid-area: taken_container;
+}
+
+.timer_container {
+  grid-area: timer_container;
+}
+
+.sheet_container {
+  grid-area: sheet_container;
+}
+
+.navbar_container {
+  grid-area: navbar_container;
+}
+
+.module {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+
   width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
-.main-section{
-  color: #ffff;
-}
-
-.code-lines ol{
-padding-top: 5px;
-}
-
-.tabrow{
-    border-bottom: 1px solid #2b2b2b;
-    background-color: #181818;
-}
-
-.tab {
-  height: 30px;
-  width: 120px;
-  background-color: #1f1f1f;
-  border-right: 1px solid #2b2b2b;
-  border-top: 2px solid #2e79ce;
-  color: #ffff;
-  display: block;
+.timer-display {
+  font-size: 72px;
+  font-weight: bold;
   text-align: center;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.tab p{
-  color: #9c9c9c;
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-/* ! vind beter alternatief voor padding-top */
-.tab p{
-  margin: auto;
-  padding-top: 7px;
+.timer-controls button {
+  background-color: #592e00;
+  border-radius: 10px;
+  border: 1px solid #592e00;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #592e00;
+  width: auto;
+  box-sizing: border-box;
+  transition: background 0.2s;
 }
 
-.code-lines{
-    color: #707680;
+.timer-controls button:hover {
+  background-color: #814100;
 }
