@@ -1,0 +1,40 @@
+body {
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+main {}
+
+.learningJournal {
+    border-bottom: 3px dashed black;
+}
+
+.iLoveWeb {
+    border-bottom: 3px dashed black;
+}
+
+.codeGarden {
+    border-bottom: 3px dashed black;
+}
+
+.fdndKnowledgeBank {
+    border-bottom: 3px dashed black;
+}
+
+a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+
+    &:hover {
+        color: pink;
+    }
+}
+
+span {
+    font-size: 50px;
+}
