@@ -56,10 +56,11 @@ main {
     gap: 8px;
     grid-row-gap: 50px;
     justify-items: start;
-    width: 20%;
+    width:20%;
 
-    & * {
+    & div{
         cursor: pointer;
+        padding: 5px;
     }
 }
 
@@ -139,15 +140,17 @@ main {
     grid-row-start: 5;
 }
 
+.selectedGrid {
+    background-color: rgba(0, 0, 0, 0.097);
+    border-radius: 5px;
+}
+
 #frame {
     background-color: #323232;
     width: 70%;
     border-radius: 10px;
     border: 1x solid #cdcdcd;
     box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
-}
-
-#frame {
     margin: 0;
     color: white;
     display: none;
@@ -204,7 +207,7 @@ main {
 
 .frameContent {
     height: 600px;
-    overflow: scroll;
+    overflow-y: scroll;
 
     & p {
         width: 90%;
@@ -219,6 +222,8 @@ main {
     & .journalEntry {
         padding-left: 20px;
         border-bottom: 0.5px solid #d5d6d6;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
     }
 }
 
