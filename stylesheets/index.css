@@ -57,6 +57,10 @@ main {
     grid-row-gap: 50px;
     justify-items: start;
     width: 20%;
+
+    & * {
+        cursor: pointer;
+    }
 }
 
 #weLoveWeb {
@@ -146,6 +150,8 @@ main {
 #frame {
     margin: 0;
     color: white;
+    display: none;
+    height: 650px;
 }
 
 .frameTop {
@@ -170,6 +176,10 @@ main {
             background-color: #ed695e;
             border-radius: 100px;
             margin-right: 5px;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         & #minimizeButton {
@@ -178,6 +188,7 @@ main {
             background-color: #f5bd50;
             border-radius: 100px;
             margin-right: 5px;
+            cursor: not-allowed;
         }
 
         & #fullscreenButton {
@@ -186,8 +197,37 @@ main {
             background-color: #61c454;
             border-radius: 100px;
             margin-right: 20px;
+            cursor: not-allowed;
         }
     }
 }
 
-.frameContent {}
+.frameContent {
+    height: 600px;
+    overflow: scroll;
+
+    & p {
+        width: 90%;
+    }
+
+    & .codeBlock {
+        padding: 2px;
+        background-color: #404040;
+        color: orange;
+    }
+
+    & .journalEntry {
+        padding-left: 20px;
+        border-bottom: 0.5px solid #d5d6d6;
+    }
+}
+
+.titel {
+    font-weight: 800;
+}
+
+.bron {
+    font-size: small;
+    font-style: italic;
+    color: #d5d6d6;
+}
