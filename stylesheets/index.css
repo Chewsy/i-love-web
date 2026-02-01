@@ -18,16 +18,6 @@ header {
     padding-left: 20px;
     border-bottom: 0.2px solid #cdcdcd;
     user-select: none;
-
-    & img {
-        padding: 4px 10px 4px 10px;
-
-        &:hover {
-            background-color: #d5d6d6;
-            border-radius: 3px;
-        }
-    }
-
 }
 
 nav ul {
@@ -150,5 +140,54 @@ main {
     width: 70%;
     border-radius: 10px;
     border: 1x solid #cdcdcd;
-    box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
 }
+
+#frame {
+    margin: 0;
+    color: white;
+}
+
+.frameTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid black;
+
+    & h1 {
+        padding-left: 20px;
+        font-size: large;
+    }
+
+    & #frameButtons {
+        display: flex;
+        flex-direction: row;
+
+        & #closeButton {
+            width: 15px;
+            height: 15px;
+            background-color: #ed695e;
+            border-radius: 100px;
+            margin-right: 5px;
+        }
+
+        & #minimizeButton {
+            width: 15px;
+            height: 15px;
+            background-color: #f5bd50;
+            border-radius: 100px;
+            margin-right: 5px;
+        }
+
+        & #fullscreenButton {
+            width: 15px;
+            height: 15px;
+            background-color: #61c454;
+            border-radius: 100px;
+            margin-right: 20px;
+        }
+    }
+}
+
+.frameContent {}
