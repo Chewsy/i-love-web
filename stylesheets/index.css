@@ -49,6 +49,10 @@ main {
     padding-left: 20px;
 }
 
+ol li{
+    padding-bottom: 10px;
+}
+
 #grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
