@@ -1,4 +1,14 @@
+<script>
+    import info_icon from "$lib/assets/info_icon.svg";
+</script>
+
 <main>
+    <header>
+        <link rel="icon" href={info_icon} />
+        <img src={info_icon} alt="Information">
+        <a href="/">Read about how I explore making my own markdown parser</a>
+    </header>
+
     <h1>Learning journal</h1>
     <p>
         Lorem ipsum dolor sit amet. Vel optio temporein molestiae rem velit
@@ -26,3 +36,23 @@
         fugit.
     </p>
 </main>
+
+<style>
+    header {
+        width: max-content;
+        height: 40px;
+        background-color: var(--brown-default);
+        color: var(--brown-light);
+        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        & img{
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+</style>
