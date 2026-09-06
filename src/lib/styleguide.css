@@ -1,0 +1,95 @@
+@font-face {
+	font-family: "Dynalight";
+	font-weight: 400;
+	src: url("/fonts/dynalight-400.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Kedebideri";
+	font-weight: 400;
+	src: url("/fonts/kedebideri-400.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Kedebideri";
+	font-weight: 700;
+	src: url("/fonts/kedebideri-700.woff2") format("woff2");
+}
+
+:root {
+
+	/* Colors */
+	--brown-dark: hsl(25, 28%, 14%);
+	--brown-default: hsl(25, 28%, 22%);
+	--brown-light: hsl(25, 28%, 30%);
+
+	--accent-default: hsl(30, 60%, 62%);
+	--accent-light: hsl(30, 60%, 74%);
+
+	--cream: hsl(42, 38%, 88%);
+
+	/* Fonts */
+	--font: "Kedebideri", system-ui, sans-serif;
+	--font-heading: "Dynalight";
+
+	/* Spacing */
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2.5rem;
+
+	--radius: 0.625rem;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--brown-dark);
+	color: var(--cream);
+	font-family: var(--font);
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+main {
+	width: 70%;
+	margin-top: var(--space-xl);
+	padding: var(--space-xl);
+	font-weight: 400;
+	border-left: 0.5px solid var(--cream);
+}
+
+h1 {
+	font-family: var(--font-heading);
+	color: var(--text-bright);
+	font-size: 5rem;
+}
+
+p {
+	font-size: 1rem;
+}
+
+a {
+	color: var(--accent-default);
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+}
+
+a:hover {
+	color: var(--accent-light);
+}
+
+button {
+	background: var(--accent-default);
+	color: var(--brown-dark);
+	border: 0;
+	border-radius: var(--radius);
+}
