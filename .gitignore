@@ -1,0 +1,19 @@
+# dependencies
+/node_modules
+
+# sveltekit
+/.svelte-kit
+/build
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.local
+.env
+.env.*
+
+# vite
+/vite.config.js.timestamp-*
+/vite.config.ts.timestamp-*
