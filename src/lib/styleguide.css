@@ -1,7 +1,7 @@
 @font-face {
-	font-family: "Dynalight";
+	font-family: "Castoro Titling";
 	font-weight: 400;
-	src: url("/fonts/dynalight-400.woff2") format("woff2");
+	src: url("/fonts/castoro-titling-400.woff2") format("woff2");
 }
 
 @font-face {
@@ -17,7 +17,6 @@
 }
 
 :root {
-
 	/* Colors */
 	--brown-dark: hsl(25, 28%, 14%);
 	--brown-default: hsl(25, 28%, 22%);
@@ -30,7 +29,8 @@
 
 	/* Fonts */
 	--font: "Kedebideri", system-ui, sans-serif;
-	--font-heading: "Dynalight";
+	--font-heading: "Castoro Titling";
+	--line-height: 1.5;
 
 	/* Spacing */
 	--space-xs: 0.25rem;
@@ -53,29 +53,50 @@ body {
 	color: var(--cream);
 	font-family: var(--font);
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: var(--line-height);
+}
+
+main,
+footer {
+	width: min(100%, 40rem);
+	margin-inline: auto;
+	padding-inline: var(--space-md);
+	overflow-wrap: break-word;
 }
 
 main {
-	width: min(100%, 640px);
-	max-width: 100%;
-	margin: 0 auto;
-	margin-top: var(--space-xl);
-	padding: 0 var(--space-md) var(--space-xl);
-	font-weight: 400;
+	padding-left: var(--space-md);
+	padding-right: var(--space-md);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-heading);
+	color: var(--cream);
+	line-height: var(--line-height);
+	margin-bottom: var(--space-sm);
 	overflow-wrap: break-word;
 }
 
 h1 {
-	font-family: var(--font-heading);
-	color: var(--cream);
-	font-size: clamp(2.5rem, 12vw, 4rem);
-	font-weight: 400;
-	line-height: 1.05;
+	font-size: 3rem;
 }
 
-p {
-	width: 100%;
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1rem;
+}
+
+hr {
+	height: 0.5px;
+	border: 0;
+	background: var(--brown-default);
+	margin-top: var(--space-md);
+	margin-bottom: var(--space-md);
 }
 
 a {
@@ -88,40 +109,35 @@ a:hover {
 	color: var(--accent-light);
 }
 
-footer {
-	width: min(100%, 640px);
-	margin: var(--space-xl) auto;
-	padding: 0 var(--space-md);
-	overflow-wrap: break-word;
-	padding-top: 10px;
-	border-top: 0.5px solid var(--brown-default);
+img {
+	max-width: 100%;
+	height: auto;
+	margin-top: 1.25rem;
 }
 
-@media (width >= 768px) {
+footer {
+	margin: var(--space-xl) 0 0;
+	border-top: 0.5px solid var(--brown-default);
+	padding-top: var(--space-md);
+	padding-bottom: var(--space-md);
+}
+
+@media (width >=768px) {
 	body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 
-	main {
+	main,
+	footer {
 		width: 70%;
 		max-width: none;
+	}
+
+	main {
 		margin-top: var(--space-xl);
 		padding: var(--space-xl);
 		border-left: 0.5px solid var(--cream);
-	}
-
-	h1 {
-		color: var(--cream);
-		font-size: 5rem;
-	}
-
-	footer {
-		width: 70%;
-	}
-
-	p {
-		font-size: 1rem;
 	}
 }
