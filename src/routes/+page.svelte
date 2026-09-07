@@ -5,7 +5,7 @@
 <main>
     <header>
         <link rel="icon" href={info_icon} />
-        <img src={info_icon} alt="Information">
+        <img src={info_icon} alt="Information" />
         <a href="/">Read about how I explore making my own markdown parser</a>
     </header>
 
@@ -39,20 +39,28 @@
 
 <style>
     header {
-        width: max-content;
-        height: 40px;
-        background-color: var(--brown-default);
-        color: var(--brown-light);
-        border-radius: 10px;
-
         display: flex;
         align-items: center;
-        padding-left: 10px;
-        padding-right: 10px;
+        gap: 10px;
+        width: 100%;
+        padding: 8px 12px;
+        background-color: var(--brown-default);
+        border-radius: var(--radius);
+        box-sizing: border-box;
+        margin-bottom: 10px;
 
-        & img{
+        & img {
             height: 20px;
-            margin-right: 10px;
+            flex-shrink: 0;
+        }
+    }
+
+    @media (width >=768px) {
+        header {
+            width: max-content;
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 </style>

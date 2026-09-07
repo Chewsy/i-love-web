@@ -5,8 +5,10 @@
 <style>
     footer {
         margin-top: 20px;
+        text-align: center;
     }
     p {
         color: var(--brown-light);
+        overflow-wrap: break-word;
     }
 </style>
